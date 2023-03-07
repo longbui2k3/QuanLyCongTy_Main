@@ -62,14 +62,15 @@
             DangKi dk = new DangKi();
             dk.Show();
         }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-                    }
-
         private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Luong l = new Luong();
+            l.Show();
         }
     }
 }

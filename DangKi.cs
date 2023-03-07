@@ -13,33 +13,14 @@ namespace QuanLyCongTy
         {
             InitializeComponent();
         }
-        public void KiemTraSDT(string sdt)
-        {
-            string vn_regex = "((09|03|07|08|05)+([0-9]{8})$)";
-            Regex regex = new Regex(vn_regex);
-            if (!regex.IsMatch(sdt))
-                throw new Exception("Số điện thoại không hợp lệ");
-        }
-        public bool KiemTraEmail(string email)
-        {
-            try
-            {
-                MailAddress mail = new MailAddress(email);
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
         public void KiemTraHopLe()
         {
             if (hoVaTen.Text == "" || viTri.Text == "" || SDT.Text == "" || Email.Text == "" || username.Text == "" || txt_Pwd.Text == "" || txt_PwdCon.Text == "")
             {
                 throw new Exception("Thông tin không được để trống");
             }
-            KiemTraSDT(SDT.Text);
-            if (!KiemTraEmail(Email.Text)) throw new Exception("Email không hợp lệ");
+            dao.KiemTraSDT(SDT.Text);
+            if (!dao.KiemTraEmail(Email.Text)) throw new Exception("Email không hợp lệ");
             if (txt_Pwd.Text != txt_PwdCon.Text) throw new Exception("Mật khẩu xác nhận bạn nhập không phù hợp");
         }
         int hidePwd = 1;

@@ -9,13 +9,34 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QuanLyCongTy
 {
     internal class Dao
     {
         public SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-
+        public void KiemTraSDT(string sdt)
+        {
+            string vn_regex = "((09|03|07|08|05)+([0-9]{8})$)";
+            Regex regex = new Regex(vn_regex);
+            if (!regex.IsMatch(sdt))
+                throw new Exception("Số điện thoại không hợp lệ");
+        }
+        public bool KiemTraEmail(string email)
+        {
+            try
+            {
+                MailAddress mail = new MailAddress(email);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        
         public DataTable DanhSach(string s)
         {
             string sqlStr = string.Format(s);
@@ -26,7 +47,6 @@ namespace QuanLyCongTy
         }
         public void ThemTaiKhoan(TaiKhoan tk, string query)
         {
-           
             try
             {
                 conn.Open();
@@ -42,7 +62,6 @@ namespace QuanLyCongTy
             {
                 conn.Close();
             }
-             
         }
         public void KiemTraDangNhap(string username, string password, string query)
         {
