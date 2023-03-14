@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="CRM.cs">
+    <Compile Update="RecycleCode\CRM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Luong.cs">
+    <Compile Update="RecycleCode\Luong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="HRM.cs">
+    <Compile Update="RecycleCode\HRM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Main.cs">
@@ -19,13 +19,22 @@
     <Compile Update="DangKi.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="RecycleCode\NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="TimKiemNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UserControl1.cs">
+    <Compile Update="UCLuong.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Workplace.cs">
+    <Compile Update="UCNhanSu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="RecycleCode\Workplace.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

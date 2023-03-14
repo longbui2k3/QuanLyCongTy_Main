@@ -17,6 +17,10 @@ namespace QuanLyCongTy
     internal class Dao
     {
         public SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        public Dao()
+        {
+            conn = new SqlConnection(Properties.Settings.Default.connStr);
+        }
         public void KiemTraSDT(string sdt)
         {
             string vn_regex = "((09|03|07|08|05)+([0-9]{8})$)";
@@ -56,7 +60,8 @@ namespace QuanLyCongTy
             }
             catch (SqlException sqlex)
             {
-                if (sqlex.Number == 2627) throw new Exception("Tên người dùng đã tồn tại");
+                int errorPrimaryKey = 2627;
+                if (sqlex.Number == errorPrimaryKey) throw new Exception("Tên người dùng đã tồn tại");
             }
             finally
             {
@@ -77,6 +82,7 @@ namespace QuanLyCongTy
                 throw new Exception("");
             }
             else conn.Close();
+            
         }
     }
 }

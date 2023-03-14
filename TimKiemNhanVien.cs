@@ -71,7 +71,7 @@ namespace QuanLyCongTy
                 string query = "SELECT MaNV as 'Mã Nhân Viên', " +
                                         "HoTen as 'Họ và Tên', " +
                                         "ViTri as 'Vị Trí', " +
-                                        "TenPB as 'Phòng Ban' FROM NHANVIEN, PHONGBAN WHERE NHANVIEN.MaPB=PHONGBAN.MaPB AND HoTen LIKE N'%{0}%'";
+                                        "TenPB as 'Phòng Ban' FROM NHANVIEN inner join PHONGBAN on NhanVien.MaPB=PhongBan.MaPB WHERE HoTen LIKE N'%{0}%'";
                 string sqlStr = string.Format(query, txt_Search.Text);
                 if (dao.DanhSach(sqlStr).Rows.Count > 0)
                 {

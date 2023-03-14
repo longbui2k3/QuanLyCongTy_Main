@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Luong));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label14 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
@@ -74,12 +76,13 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Location = new System.Drawing.Point(1, 2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.label14);
+            this.splitContainer1.Panel1.Controls.Add(this.button2);
             this.splitContainer1.Panel1.Controls.Add(this.btn_Xoa);
             this.splitContainer1.Panel1.Controls.Add(this.btn_Sua);
             this.splitContainer1.Panel1.Controls.Add(this.btn_Them);
@@ -89,15 +92,36 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(1502, 702);
-            this.splitContainer1.SplitterDistance = 576;
+            this.splitContainer1.Size = new System.Drawing.Size(1501, 719);
+            this.splitContainer1.SplitterDistance = 575;
             this.splitContainer1.SplitterWidth = 7;
             this.splitContainer1.TabIndex = 0;
             this.splitContainer1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer1_SplitterMoved);
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(183, 17);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(177, 30);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Thông Tin Lương";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(523, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(41, 35);
+            this.button2.TabIndex = 5;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // btn_Xoa
             // 
-            this.btn_Xoa.Location = new System.Drawing.Point(387, 652);
+            this.btn_Xoa.Location = new System.Drawing.Point(387, 670);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(94, 29);
             this.btn_Xoa.TabIndex = 4;
@@ -107,7 +131,7 @@
             // 
             // btn_Sua
             // 
-            this.btn_Sua.Location = new System.Drawing.Point(247, 652);
+            this.btn_Sua.Location = new System.Drawing.Point(247, 670);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(94, 29);
             this.btn_Sua.TabIndex = 3;
@@ -117,7 +141,7 @@
             // 
             // btn_Them
             // 
-            this.btn_Them.Location = new System.Drawing.Point(100, 652);
+            this.btn_Them.Location = new System.Drawing.Point(100, 670);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(94, 29);
             this.btn_Them.TabIndex = 2;
@@ -145,9 +169,9 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(12, 200);
+            this.groupBox2.Location = new System.Drawing.Point(12, 244);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(552, 434);
+            this.groupBox2.Size = new System.Drawing.Size(552, 407);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bảng Lương";
@@ -156,6 +180,7 @@
             // 
             this.txt_ThucNhan.Location = new System.Drawing.Point(145, 356);
             this.txt_ThucNhan.Name = "txt_ThucNhan";
+            this.txt_ThucNhan.ReadOnly = true;
             this.txt_ThucNhan.Size = new System.Drawing.Size(184, 27);
             this.txt_ThucNhan.TabIndex = 17;
             // 
@@ -165,6 +190,7 @@
             this.txt_TamUng.Name = "txt_TamUng";
             this.txt_TamUng.Size = new System.Drawing.Size(184, 27);
             this.txt_TamUng.TabIndex = 16;
+            this.txt_TamUng.TextChanged += new System.EventHandler(this.txt_TamUng_TextChanged);
             // 
             // txt_KhauTru
             // 
@@ -172,20 +198,24 @@
             this.txt_KhauTru.Name = "txt_KhauTru";
             this.txt_KhauTru.Size = new System.Drawing.Size(184, 27);
             this.txt_KhauTru.TabIndex = 15;
+            this.txt_KhauTru.TextChanged += new System.EventHandler(this.txt_KhauTru_TextChanged);
             // 
             // txt_LuongPhuCap
             // 
-            this.txt_LuongPhuCap.Location = new System.Drawing.Point(145, 138);
+            this.txt_LuongPhuCap.Location = new System.Drawing.Point(338, 93);
             this.txt_LuongPhuCap.Name = "txt_LuongPhuCap";
             this.txt_LuongPhuCap.Size = new System.Drawing.Size(184, 27);
             this.txt_LuongPhuCap.TabIndex = 14;
+            this.txt_LuongPhuCap.TextChanged += new System.EventHandler(this.txt_LuongPhuCap_TextChanged);
             // 
             // txt_LuongNgayCong
             // 
-            this.txt_LuongNgayCong.Location = new System.Drawing.Point(338, 86);
+            this.txt_LuongNgayCong.Location = new System.Drawing.Point(171, 141);
             this.txt_LuongNgayCong.Name = "txt_LuongNgayCong";
+            this.txt_LuongNgayCong.ReadOnly = true;
             this.txt_LuongNgayCong.Size = new System.Drawing.Size(184, 27);
             this.txt_LuongNgayCong.TabIndex = 13;
+            this.txt_LuongNgayCong.TextChanged += new System.EventHandler(this.txt_LuongNgayCong_TextChanged);
             // 
             // txt_SoCongChuan
             // 
@@ -193,6 +223,7 @@
             this.txt_SoCongChuan.Name = "txt_SoCongChuan";
             this.txt_SoCongChuan.Size = new System.Drawing.Size(37, 27);
             this.txt_SoCongChuan.TabIndex = 12;
+            this.txt_SoCongChuan.TextChanged += new System.EventHandler(this.txt_SoCongChuan_TextChanged);
             // 
             // txt_Thuong
             // 
@@ -200,6 +231,7 @@
             this.txt_Thuong.Name = "txt_Thuong";
             this.txt_Thuong.Size = new System.Drawing.Size(184, 27);
             this.txt_Thuong.TabIndex = 11;
+            this.txt_Thuong.TextChanged += new System.EventHandler(this.txt_Thuong_TextChanged);
             // 
             // txt_LuongViTri
             // 
@@ -207,6 +239,7 @@
             this.txt_LuongViTri.Name = "txt_LuongViTri";
             this.txt_LuongViTri.Size = new System.Drawing.Size(184, 27);
             this.txt_LuongViTri.TabIndex = 10;
+            this.txt_LuongViTri.TextChanged += new System.EventHandler(this.txt_LuongViTri_TextChanged);
             // 
             // txt_NgayCong
             // 
@@ -214,6 +247,7 @@
             this.txt_NgayCong.Name = "txt_NgayCong";
             this.txt_NgayCong.Size = new System.Drawing.Size(37, 27);
             this.txt_NgayCong.TabIndex = 9;
+            this.txt_NgayCong.TextChanged += new System.EventHandler(this.txt_NgayCong_TextChanged);
             // 
             // label13
             // 
@@ -227,11 +261,12 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(19, 141);
+            this.label12.Location = new System.Drawing.Point(201, 93);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(111, 20);
             this.label12.TabIndex = 7;
             this.label12.Text = "Lương phụ cấp:";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label11
             // 
@@ -263,7 +298,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(201, 89);
+            this.label8.Location = new System.Drawing.Point(19, 144);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(132, 20);
             this.label8.TabIndex = 3;
@@ -307,9 +342,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 53);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(552, 182);
+            this.groupBox1.Size = new System.Drawing.Size(552, 172);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Cá Nhân";
@@ -318,9 +353,9 @@
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(245, 125);
+            this.button1.Location = new System.Drawing.Point(255, 111);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 45);
+            this.button1.Size = new System.Drawing.Size(44, 43);
             this.button1.TabIndex = 13;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -399,7 +434,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(919, 702);
+            this.dataGridView1.Size = new System.Drawing.Size(919, 719);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -407,12 +442,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1502, 702);
+            this.ClientSize = new System.Drawing.Size(1502, 721);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Luong";
             this.Text = "Lương";
             this.Load += new System.EventHandler(this.Luong_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
@@ -461,5 +497,7 @@
         private TextBox txt_ViTri;
         private TextBox txt_PhongBan;
         private Button button1;
+        private Button button2;
+        private Label label14;
     }
 }

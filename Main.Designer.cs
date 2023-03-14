@@ -61,7 +61,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1496, 185);
+            this.tabControl1.Size = new System.Drawing.Size(1411, 192);
             this.tabControl1.TabIndex = 0;
             // 
             // tc_taikhoan
@@ -71,7 +71,7 @@
             this.tc_taikhoan.Location = new System.Drawing.Point(4, 29);
             this.tc_taikhoan.Name = "tc_taikhoan";
             this.tc_taikhoan.Padding = new System.Windows.Forms.Padding(3);
-            this.tc_taikhoan.Size = new System.Drawing.Size(1488, 152);
+            this.tc_taikhoan.Size = new System.Drawing.Size(1403, 159);
             this.tc_taikhoan.TabIndex = 0;
             this.tc_taikhoan.Text = "Tài khoản";
             this.tc_taikhoan.UseVisualStyleBackColor = true;
@@ -116,7 +116,7 @@
             // 
             this.tc_workplace.Location = new System.Drawing.Point(4, 29);
             this.tc_workplace.Name = "tc_workplace";
-            this.tc_workplace.Size = new System.Drawing.Size(1488, 152);
+            this.tc_workplace.Size = new System.Drawing.Size(1403, 159);
             this.tc_workplace.TabIndex = 2;
             this.tc_workplace.Text = "Workplace";
             this.tc_workplace.UseVisualStyleBackColor = true;
@@ -125,7 +125,7 @@
             // 
             this.tc_crm.Location = new System.Drawing.Point(4, 29);
             this.tc_crm.Name = "tc_crm";
-            this.tc_crm.Size = new System.Drawing.Size(1488, 152);
+            this.tc_crm.Size = new System.Drawing.Size(1403, 159);
             this.tc_crm.TabIndex = 3;
             this.tc_crm.Text = "CRM";
             this.tc_crm.UseVisualStyleBackColor = true;
@@ -140,10 +140,11 @@
             this.tc_hrm.Controls.Add(this.button3);
             this.tc_hrm.Location = new System.Drawing.Point(4, 29);
             this.tc_hrm.Name = "tc_hrm";
-            this.tc_hrm.Size = new System.Drawing.Size(1488, 152);
+            this.tc_hrm.Size = new System.Drawing.Size(1403, 159);
             this.tc_hrm.TabIndex = 4;
             this.tc_hrm.Text = "HRM";
             this.tc_hrm.UseVisualStyleBackColor = true;
+            this.tc_hrm.Click += new System.EventHandler(this.tc_hrm_Click);
             // 
             // button8
             // 
@@ -185,6 +186,7 @@
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.Location = new System.Drawing.Point(369, 0);
             this.button6.Margin = new System.Windows.Forms.Padding(0);
             this.button6.Name = "button6";
@@ -193,7 +195,6 @@
             this.button6.Text = "Tiền Lương";
             this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button6.UseCompatibleTextRendering = true;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -220,6 +221,7 @@
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(123, 0);
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
@@ -228,8 +230,8 @@
             this.button4.Text = "Nhân Sự";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button4.UseCompatibleTextRendering = true;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -258,8 +260,8 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.tabControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(1496, 743);
-            this.splitContainer1.SplitterDistance = 185;
+            this.splitContainer1.Size = new System.Drawing.Size(1411, 932);
+            this.splitContainer1.SplitterDistance = 192;
             this.splitContainer1.SplitterWidth = 10;
             this.splitContainer1.TabIndex = 1;
             this.splitContainer1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer1_SplitterMoved);
@@ -268,8 +270,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1496, 743);
+            this.ClientSize = new System.Drawing.Size(1411, 932);
             this.Controls.Add(this.splitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Main";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Main_Load);

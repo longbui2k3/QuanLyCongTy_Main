@@ -28,10 +28,18 @@ CREATE TABLE NHANVIEN(
 	NGAYSINH nchar(50) NOT NULL,
 	SODIENTHOAI char(50) NOT NULL,
 	MAPB char(50) references PHONGBAN(MAPB),
+	TinhTrang nchar(50) NULL
 )
+alter table Nhanvien 
+add Email char(100) NULL
+
+Update nhanvien set Email = 'trancongminh@gmail.com' where MaNV='NV003'
+
+select * from Nhanvien
 INSERT INTO NHANVIEN VALUES('NV001', N'Bùi Đức Long', N'Trưởng Phòng', N'Thái Bình', N'Kinh', N'Nam', '04/09/2003', '0777981051', 'PB001');
 INSERT INTO NHANVIEN VALUES('NV002', N'Vũ Đức Lộc', N'Giám Đốc', N'Lâm Đồng', N'Kinh', N'Nam', '14/02/2003', '0949484333', 'PB002');
 INSERT INTO NHANVIEN VALUES('NV003', N'Trần Công Minh', N'Phó Giám Đốc', N'Hà Tĩnh', N'Kinh', N'Nam', '15/06/2003', '0923532224', 'PB001');
+INSERT INTO NHANVIEN VALUES('NV004', N'Hoàng Văn B', N'Nhân Viên', N'Hà Tĩnh', N'Kinh', N'Nam', '13/04/2003', '0843434445', 'PB003', N'Đang làm', 'hoangvanb@gmail.com');
 SELECT * FROM NHANVIEN
 /*
 ALTER TABLE NHANVIEN ALTER COlumn LUONG int NOT NULL;

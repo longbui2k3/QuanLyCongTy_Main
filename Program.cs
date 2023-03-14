@@ -1,3 +1,6 @@
+﻿using QuanLyCongTy.Data;
+using QuanLyCongTy.Models;
+
 namespace QuanLyCongTy
 {
     internal static class Program
@@ -13,6 +16,31 @@ namespace QuanLyCongTy
             
             ApplicationConfiguration.Initialize();
             Application.Run(new Main());
+            /*
+            using QLCT context = new QLCT();
+            MPhongBan mPhongBan = new MPhongBan()
+            {
+                MaPB = "PB001",
+                TenPB = "Marketing",
+                DiaChi = "TPHCM",
+                SDT = "0493859555",
+            };
+            context.PhongBan.Add(mPhongBan);
+            MNhanVien mNhanVien = new MNhanVien()
+            {
+                MaNV = "NV001",
+                HoTen = "Bùi Đức Long",
+                ViTri = "Giám Đốc",
+                QueQuan = "Thái Bình",
+                DanToc = "Kinh",
+                GioiTinh = "Nam",
+                NgaySinh = "04/09/2003",
+                SDT = "0777981051",
+                MaPB = mPhongBan,
+            };
+            context.NhanVien.Add(mNhanVien);*/
+
+                            
         }
     }
 }
