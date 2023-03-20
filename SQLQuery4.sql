@@ -1,0 +1,1 @@
+﻿ALTER TABLE TimeLog ADD TotalWorkHours Float;
