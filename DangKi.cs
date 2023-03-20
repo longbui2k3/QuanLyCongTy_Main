@@ -8,7 +8,7 @@ namespace QuanLyCongTy
 {
     public partial class DangKi : Form
     {
-        Dao dao = new Dao();
+        IDao dao = new IDao();
         public DangKi()
         {
             InitializeComponent();

@@ -13,7 +13,7 @@ namespace QuanLyCongTy
 {
     public partial class UCLuong : UserControl
     {
-        Dao dao = new Dao();
+        IDao dao = new IDao();
         public static TextBox txt_HoVaTenCopy;
         public static TextBox txt_MaNVCopy;
         public static TextBox txt_PhongBanCopy;

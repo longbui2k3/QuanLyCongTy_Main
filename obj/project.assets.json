@@ -3746,19 +3746,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {}
+    "C:\\Users\\vuanh\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\Dai Hoc\\Lap trinh Windows\\Tuan 5\\QuanLyCongTy\\QuanLyCongTy\\QuanLyCongTy.csproj",
+      "projectUniqueName": "E:\\QLCT\\QuanLyCongTy.csproj",
       "projectName": "QuanLyCongTy",
-      "projectPath": "C:\\Users\\HP\\Desktop\\Dai Hoc\\Lap trinh Windows\\Tuan 5\\QuanLyCongTy\\QuanLyCongTy\\QuanLyCongTy.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\Dai Hoc\\Lap trinh Windows\\Tuan 5\\QuanLyCongTy\\QuanLyCongTy\\obj\\",
+      "projectPath": "E:\\QLCT\\QuanLyCongTy.csproj",
+      "packagesPath": "C:\\Users\\vuanh\\.nuget\\packages\\",
+      "outputPath": "E:\\QLCT\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vuanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3828,7 +3833,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

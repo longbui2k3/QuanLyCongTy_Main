@@ -60,4 +60,21 @@ CREATE TABLE LUONG(
 	TamUng int NOT NULL,
 	ThucNhan int NOT NULL,	
 )
+CREATE TABLE TimeLog (
+    TimeLogID INT IDENTITY(1,1) PRIMARY KEY,
+    EmployeeID INT NOT NULL,
+    CheckinTime DATETIME NOT NULL,
+    CheckoutTime DATETIME,
+    CONSTRAINT FK_TimeLog_Employee FOREIGN KEY (EmployeeID) REFERENCES NHANVIEN(MANV)
+)
+
+CREATE TABLE LeaveRequest (
+    LeaveRequestID INT IDENTITY(1,1) PRIMARY KEY,
+    EmployeeID INT NOT NULL,
+    LeaveReason nvarchar(100) NOT NULL,
+    StartDate DATE NOT NULL,
+    EndDate DATE NOT NULL,
+    Status nvarchar(20) NOT NULL,
+    CONSTRAINT FK_LeaveRequest_Employee FOREIGN KEY (EmployeeID) REFERENCES NHANVIEN(MANV)
+)
 SELECT * FROM NHANVIEN, PHONGBAN 

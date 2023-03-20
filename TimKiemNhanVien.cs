@@ -12,7 +12,7 @@ namespace QuanLyCongTy
 {
     public partial class TimKiemNhanVien : Form
     {
-        Dao dao = new Dao();
+        IDao dao = new IDao();
         public TimKiemNhanVien()
         {
             InitializeComponent();

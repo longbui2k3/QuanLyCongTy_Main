@@ -13,7 +13,7 @@ namespace QuanLyCongTy
 {
     public partial class UCNhanVien : UserControl
     {
-        Dao dao = new Dao();
+        IDao dao = new IDao();
         public UCNhanVien()
         {
             InitializeComponent();

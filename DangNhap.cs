@@ -15,7 +15,7 @@ namespace QuanLyCongTy
 {
     public partial class DangNhap : Form
     {
-        Dao dao = new Dao();
+        IDao dao = new IDao();
         public DangNhap()
         {
             InitializeComponent();

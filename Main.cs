@@ -7,7 +7,7 @@
         public Main()
         {
             InitializeComponent();
-           // WindowState = FormWindowState.Maximized;
+            // WindowState = FormWindowState.Maximized;
             tc = this.tabControl1;
             tc_tk = this.tc_taikhoan;
         }
@@ -40,7 +40,7 @@
                 ctrl.Dispose();
             }
             splitContainer1.Panel2.Controls.Add(new UCLuong());
-           
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -49,15 +49,21 @@
             {
                 ctrl.Dispose();
             }
-           UCNhanSu ucns = new UCNhanSu();
+            UCNhanSu ucns = new UCNhanSu();
             ucns.Location = new Point(10, 0);
             splitContainer1.Panel2.Controls.Add(ucns);
-            
+
         }
 
         private void tc_hrm_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmChamCong dlg2 = new frmChamCong();
+            dlg2.ShowDialog();
         }
     }
 }

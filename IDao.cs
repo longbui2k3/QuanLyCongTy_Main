@@ -14,10 +14,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QuanLyCongTy
 {
-    internal class Dao
+    internal class IDao
     {
         public SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        public Dao()
+        public IDao()
         {
             conn = new SqlConnection(Properties.Settings.Default.connStr);
         }
