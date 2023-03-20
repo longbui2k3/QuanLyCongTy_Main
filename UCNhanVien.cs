@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Microsoft.Office.Interop.Excel;
 
 namespace QuanLyCongTy
 {
@@ -110,7 +111,7 @@ namespace QuanLyCongTy
                 txt_QueQuan.Text = row.Cells[4].Value.ToString();
                 txt_DanToc.Text = row.Cells[5].Value.ToString();
                 txt_GioiTinh.Text = row.Cells[6].Value.ToString();
-                txt_NgaySinh.Text = row.Cells[7].Value.ToString();
+                date_NgaySinh.Text = row.Cells[7].Value.ToString();
                 txt_SDT.Text = row.Cells[8].Value.ToString();
                 txt_Email.Text = row.Cells[9].Value.ToString();
                 txt_TinhTrang.Text = row.Cells[10].Value.ToString();
@@ -181,16 +182,17 @@ namespace QuanLyCongTy
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            /*
+
             Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
-            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
-            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            Microsoft.Office.Interop.Excel.Workbook workbook = app.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel.Worksheet worksheet = null;
 
             app.Visible = true;
-            worksheet = workbook.Sheets["Sheet1"];
-            worksheet = workbook.ActiveSheet;
-            worksheet.Name = "Exported from gridview";
-
+           
+            worksheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Worksheets["Sheet1"];
+            worksheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.ActiveSheet;
+            worksheet.Name = "Nhân Viên";
+           
             for (int i = 1; i < dataGridView1.Columns.Count + 1; i++)
             {
                 worksheet.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
@@ -201,7 +203,46 @@ namespace QuanLyCongTy
                 {
                     worksheet.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
                 }
-            }*/
+            }
+            workbook.SaveAs("./sheet1.xlsx", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+
+        }
+        Bitmap bitmap;
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            int height = dataGridView1.Height;
+            dataGridView1.Height = dataGridView1.RowCount * dataGridView1.RowTemplate.Height * 2;
+            bitmap = new Bitmap(dataGridView1.Width, dataGridView1.Height);
+            dataGridView1.DrawToBitmap(bitmap, new System.Drawing.Rectangle(0, 0, dataGridView1.Width, dataGridView1.Height));
+            printPreviewDialog1.PrintPreviewControl.Zoom = 1;
+            printPreviewDialog1.ShowDialog();
+            dataGridView1.Height = height;
+            
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(bitmap, 0, 0);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            op.Filter = "PNG Image|*.png";
+            if (op.ShowDialog() == DialogResult.OK)
+            {
+                pB_Anh.Image = Image.FromFile(op.FileName);
+            }
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void date_NgaySinh_ValueChanged(object sender, EventArgs e)
+        {
 
         }
     }

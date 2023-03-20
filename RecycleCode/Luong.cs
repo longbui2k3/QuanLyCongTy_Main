@@ -228,8 +228,8 @@ namespace QuanLyCongTy
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            TimKiemNhanVien tknv = new TimKiemNhanVien();
-            tknv.Show();
+            //TimKiemNhanVien tknv = new TimKiemNhanVien();
+            //tknv.Show();
         }
 
         private void label12_Click(object sender, EventArgs e)

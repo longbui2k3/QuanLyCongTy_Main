@@ -10,9 +10,9 @@ namespace QuanLyCongTy.Data
 {
     internal class QLCT: DbContext
     {
-        public DbSet<MNhanVien> NhanVien { get; set; } = null!;
-        public DbSet<MPhongBan> PhongBan { get; set; } = null!;
-        public DbSet<MLuong> Luong { get; set; } = null!;
+        public DbSet<Models.NhanVien> NhanVien { get; set; } = null!;
+        public DbSet<PhongBan> PhongBan { get; set; } = null!;
+        public DbSet<Models.Luong> Luong { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {

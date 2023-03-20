@@ -15,7 +15,7 @@ namespace QuanLyCongTy
             // see https://aka.ms/applicationconfiguration.
             
             ApplicationConfiguration.Initialize();
-            Application.Run(new Main());
+            Application.Run(new NVHayQL());
             /*
             using QLCT context = new QLCT();
             MPhongBan mPhongBan = new MPhongBan()

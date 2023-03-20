@@ -46,7 +46,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1381, 720);
+            this.tabControl1.Size = new System.Drawing.Size(1618, 725);
             this.tabControl1.TabIndex = 0;
             // 
             // tp_NhanVien
@@ -54,7 +54,7 @@
             this.tp_NhanVien.Location = new System.Drawing.Point(4, 29);
             this.tp_NhanVien.Name = "tp_NhanVien";
             this.tp_NhanVien.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_NhanVien.Size = new System.Drawing.Size(1373, 687);
+            this.tp_NhanVien.Size = new System.Drawing.Size(1610, 692);
             this.tp_NhanVien.TabIndex = 0;
             this.tp_NhanVien.Text = "Thông Tin Nhân Viên";
             this.tp_NhanVien.UseVisualStyleBackColor = true;
@@ -65,7 +65,7 @@
             this.tp_HopDong.Location = new System.Drawing.Point(4, 29);
             this.tp_HopDong.Name = "tp_HopDong";
             this.tp_HopDong.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_HopDong.Size = new System.Drawing.Size(1373, 653);
+            this.tp_HopDong.Size = new System.Drawing.Size(1412, 700);
             this.tp_HopDong.TabIndex = 1;
             this.tp_HopDong.Text = "Hợp Đồng Lao Động";
             this.tp_HopDong.UseVisualStyleBackColor = true;
@@ -74,7 +74,7 @@
             // 
             this.tp_BaoHiem.Location = new System.Drawing.Point(4, 29);
             this.tp_BaoHiem.Name = "tp_BaoHiem";
-            this.tp_BaoHiem.Size = new System.Drawing.Size(1373, 653);
+            this.tp_BaoHiem.Size = new System.Drawing.Size(1412, 700);
             this.tp_BaoHiem.TabIndex = 2;
             this.tp_BaoHiem.Text = "Đóng Bảo Hiểm";
             this.tp_BaoHiem.UseVisualStyleBackColor = true;
@@ -84,7 +84,7 @@
             this.tb_NghiBu.Location = new System.Drawing.Point(4, 29);
             this.tb_NghiBu.Name = "tb_NghiBu";
             this.tb_NghiBu.Padding = new System.Windows.Forms.Padding(3);
-            this.tb_NghiBu.Size = new System.Drawing.Size(1373, 653);
+            this.tb_NghiBu.Size = new System.Drawing.Size(1412, 700);
             this.tb_NghiBu.TabIndex = 3;
             this.tb_NghiBu.Text = "Nghỉ Bù";
             this.tb_NghiBu.UseVisualStyleBackColor = true;
@@ -95,7 +95,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tabControl1);
             this.Name = "UCNhanSu";
-            this.Size = new System.Drawing.Size(1381, 720);
+            this.Size = new System.Drawing.Size(1618, 725);
             this.Load += new System.EventHandler(this.UCNhanSu_Load);
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
