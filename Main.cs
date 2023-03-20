@@ -130,11 +130,8 @@ namespace QuanLyCongTy
             var tabPage = this.tabControl2.TabPages[e.Index];
             var tabRect = this.tabControl2.GetTabRect(e.Index);
             var closeImage = new Bitmap(closeButtonFullPath);
-            e.Graphics.DrawImage(closeImage,
-                (tabRect.Right - closeImage.Width),
-                tabRect.Top + (tabRect.Height - closeImage.Height) / 2);
-            TextRenderer.DrawText(e.Graphics, tabPage.Text, tabPage.Font,
-            tabRect, tabPage.ForeColor, TextFormatFlags.Left);
+            e.Graphics.DrawImage(closeImage, (tabRect.Right - closeImage.Width-2), tabRect.Top + (tabRect.Height - closeImage.Height) / 2);
+            TextRenderer.DrawText(e.Graphics, tabPage.Text, tabPage.Font, tabRect, tabPage.ForeColor, TextFormatFlags.Left);
 
         }
 
@@ -145,16 +142,12 @@ namespace QuanLyCongTy
 
         private void tabControl2_MouseDown(object sender, MouseEventArgs e)
         {
-            for (var i = 0; i <= this.tabControl2.TabPages.Count - 1; i++)
+            for (var i = 0; i < this.tabControl2.TabPages.Count; i++)
             {
                 var tabRect = this.tabControl2.GetTabRect(i);
                 tabRect.Inflate(-2, -2);
                 var closeImage = new Bitmap(closeButtonFullPath);
-                var imageRect = new Rectangle(
-                    (tabRect.Right - closeImage.Width),
-                    tabRect.Top + (tabRect.Height - closeImage.Height) / 2,
-                    closeImage.Width,
-                    closeImage.Height);
+                var imageRect = new Rectangle((tabRect.Right - closeImage.Width),tabRect.Top + (tabRect.Height - closeImage.Height) / 2,closeImage.Width,closeImage.Height);
                 if (imageRect.Contains(e.Location))
                 {
                     this.tabControl2.TabPages.RemoveAt(i);

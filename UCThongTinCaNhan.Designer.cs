@@ -28,8 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCThongTinCaNhan));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.btn_Luu = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btn_pwd = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.txt_Password = new System.Windows.Forms.TextBox();
             this.txt_Username = new System.Windows.Forms.TextBox();
@@ -49,7 +55,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_ChonAnh = new System.Windows.Forms.Button();
             this.date_NgayCap = new System.Windows.Forms.DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
             this.txt_NoiCap = new System.Windows.Forms.TextBox();
@@ -80,8 +86,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -98,10 +106,12 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.panel1);
             this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.btn_Luu);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox4);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox3);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
@@ -112,8 +122,53 @@
             this.splitContainer1.TabIndex = 0;
             this.splitContainer1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer1_SplitterMoved);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.linkLabel2);
+            this.panel1.Controls.Add(this.linkLabel1);
+            this.panel1.Location = new System.Drawing.Point(13, 14);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(253, 690);
+            this.panel1.TabIndex = 0;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(59, 93);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(98, 20);
+            this.linkLabel2.TabIndex = 1;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Đổi mật khẩu";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(43, 28);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(145, 20);
+            this.linkLabel1.TabIndex = 0;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Chỉnh Sửa Thông Tin";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // btn_Luu
+            // 
+            this.btn_Luu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_Luu.Image = ((System.Drawing.Image)(resources.GetObject("btn_Luu.Image")));
+            this.btn_Luu.Location = new System.Drawing.Point(1039, 655);
+            this.btn_Luu.Name = "btn_Luu";
+            this.btn_Luu.Size = new System.Drawing.Size(119, 49);
+            this.btn_Luu.TabIndex = 7;
+            this.btn_Luu.Text = "     Lưu";
+            this.btn_Luu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Luu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btn_pwd);
             this.groupBox4.Controls.Add(this.label22);
             this.groupBox4.Controls.Add(this.txt_Password);
             this.groupBox4.Controls.Add(this.txt_Username);
@@ -124,6 +179,20 @@
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tài Khoản";
+            // 
+            // btn_pwd
+            // 
+            this.btn_pwd.AutoSize = true;
+            this.btn_pwd.FlatAppearance.BorderSize = 0;
+            this.btn_pwd.Image = ((System.Drawing.Image)(resources.GetObject("btn_pwd.Image")));
+            this.btn_pwd.Location = new System.Drawing.Point(393, 115);
+            this.btn_pwd.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.btn_pwd.MaximumSize = new System.Drawing.Size(28, 24);
+            this.btn_pwd.Name = "btn_pwd";
+            this.btn_pwd.Size = new System.Drawing.Size(26, 24);
+            this.btn_pwd.TabIndex = 18;
+            this.btn_pwd.UseVisualStyleBackColor = true;
+            this.btn_pwd.Click += new System.EventHandler(this.btn_pwd_Click);
             // 
             // label22
             // 
@@ -286,7 +355,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btn_ChonAnh);
             this.groupBox1.Controls.Add(this.date_NgayCap);
             this.groupBox1.Controls.Add(this.label20);
             this.groupBox1.Controls.Add(this.txt_NoiCap);
@@ -323,15 +392,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Cá Nhân";
             // 
-            // button1
+            // btn_ChonAnh
             // 
-            this.button1.Location = new System.Drawing.Point(603, 282);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 35);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Chọn Ảnh";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_ChonAnh.Location = new System.Drawing.Point(603, 282);
+            this.btn_ChonAnh.Name = "btn_ChonAnh";
+            this.btn_ChonAnh.Size = new System.Drawing.Size(150, 35);
+            this.btn_ChonAnh.TabIndex = 30;
+            this.btn_ChonAnh.Text = "Chọn Ảnh";
+            this.btn_ChonAnh.UseVisualStyleBackColor = true;
+            this.btn_ChonAnh.Click += new System.EventHandler(this.button1_Click);
             // 
             // date_NgayCap
             // 
@@ -586,9 +655,12 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "UCThongTinCaNhan";
             this.Size = new System.Drawing.Size(1636, 717);
+            this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -648,12 +720,17 @@
         private Label label18;
         private Label label17;
         private TextBox txt_SoCMND;
-        private Button button1;
+        private Button btn_ChonAnh;
         private DateTimePicker date_NgayCap;
         private GroupBox groupBox4;
         private TextBox txt_Username;
         private Label label21;
         private Label label22;
         private TextBox txt_Password;
+        private Button btn_pwd;
+        private Panel panel1;
+        private LinkLabel linkLabel2;
+        private LinkLabel linkLabel1;
+        private Button btn_Luu;
     }
 }
