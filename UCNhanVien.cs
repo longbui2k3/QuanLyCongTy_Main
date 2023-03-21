@@ -13,7 +13,7 @@ namespace QuanLyCongTy
 {
     public partial class UCNhanVien : UserControl
     {
-        Dao dao = new Dao();
+        IDao dao = new IDao();
         public UCNhanVien()
         {
             InitializeComponent();
@@ -202,6 +202,11 @@ namespace QuanLyCongTy
                     worksheet.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
                 }
             }*/
+
+        }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

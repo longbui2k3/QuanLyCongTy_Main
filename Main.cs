@@ -59,5 +59,11 @@
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmChamCong cc = new frmChamCong();
+            cc.Show();
+        }
     }
 }

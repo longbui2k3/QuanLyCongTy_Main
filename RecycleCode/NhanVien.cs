@@ -13,7 +13,7 @@ namespace QuanLyCongTy
 {
     public partial class NhanVien : Form
     {
-        Dao dao = new Dao();
+        IDao dao = new IDao();
         public NhanVien()
         {
             InitializeComponent();
@@ -102,6 +102,11 @@ namespace QuanLyCongTy
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void rb_HoTen_CheckedChanged(object sender, EventArgs e)
         {
 
         }

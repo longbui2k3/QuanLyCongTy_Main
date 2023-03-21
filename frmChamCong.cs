@@ -68,5 +68,10 @@ namespace QuanLyCongTy
             dataGridView1.DataSource = timeLogs;
             lblTotal.Text = employeeBLL.CalculateTotalWorkHours(timeLogs).ToString("N2") + " hours";
         }
+
+        private void frmChamCong_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

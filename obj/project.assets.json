@@ -3751,11 +3751,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\Dai Hoc\\Lap trinh Windows\\Tuan 5\\QuanLyCongTy\\QuanLyCongTy\\QuanLyCongTy.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\QuanLyCongTy\\QuanLyCongTy.csproj",
       "projectName": "QuanLyCongTy",
-      "projectPath": "C:\\Users\\HP\\Desktop\\Dai Hoc\\Lap trinh Windows\\Tuan 5\\QuanLyCongTy\\QuanLyCongTy\\QuanLyCongTy.csproj",
+      "projectPath": "C:\\Users\\HP\\Desktop\\QuanLyCongTy\\QuanLyCongTy.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\Dai Hoc\\Lap trinh Windows\\Tuan 5\\QuanLyCongTy\\QuanLyCongTy\\obj\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\QuanLyCongTy\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",

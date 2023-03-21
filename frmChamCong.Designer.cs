@@ -28,139 +28,137 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblMSNV = new Label();
-            label2 = new Label();
-            txtMSNV = new TextBox();
-            dtpChamCong = new DateTimePicker();
-            btnCheckIn = new Button();
-            btnCheckOut = new Button();
-            btnNghi = new Button();
-            dataGridView1 = new DataGridView();
-            txtLiDo = new TextBox();
-            lblTotal = new Label();
-            btnShow = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            SuspendLayout();
+            this.lblMSNV = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtMSNV = new System.Windows.Forms.TextBox();
+            this.dtpChamCong = new System.Windows.Forms.DateTimePicker();
+            this.btnCheckIn = new System.Windows.Forms.Button();
+            this.btnCheckOut = new System.Windows.Forms.Button();
+            this.btnNghi = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtLiDo = new System.Windows.Forms.TextBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.btnShow = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
             // 
             // lblMSNV
             // 
-            lblMSNV.AutoSize = true;
-            lblMSNV.Location = new Point(49, 35);
-            lblMSNV.Name = "lblMSNV";
-            lblMSNV.Size = new Size(50, 20);
-            lblMSNV.TabIndex = 0;
-            lblMSNV.Text = "MSNV";
+            this.lblMSNV.AutoSize = true;
+            this.lblMSNV.Location = new System.Drawing.Point(49, 35);
+            this.lblMSNV.Name = "lblMSNV";
+            this.lblMSNV.Size = new System.Drawing.Size(50, 20);
+            this.lblMSNV.TabIndex = 0;
+            this.lblMSNV.Text = "MSNV";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(49, 108);
-            label2.Name = "label2";
-            label2.Size = new Size(121, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Ngày chấm công";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(49, 108);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Ngày chấm công";
             // 
             // txtMSNV
             // 
-            txtMSNV.Location = new Point(225, 32);
-            txtMSNV.Name = "txtMSNV";
-            txtMSNV.Size = new Size(328, 27);
-            txtMSNV.TabIndex = 2;
+            this.txtMSNV.Location = new System.Drawing.Point(225, 32);
+            this.txtMSNV.Name = "txtMSNV";
+            this.txtMSNV.Size = new System.Drawing.Size(328, 27);
+            this.txtMSNV.TabIndex = 2;
             // 
             // dtpChamCong
             // 
-            dtpChamCong.Location = new Point(225, 108);
-            dtpChamCong.Name = "dtpChamCong";
-            dtpChamCong.Size = new Size(250, 27);
-            dtpChamCong.TabIndex = 3;
+            this.dtpChamCong.Location = new System.Drawing.Point(225, 108);
+            this.dtpChamCong.Name = "dtpChamCong";
+            this.dtpChamCong.Size = new System.Drawing.Size(250, 27);
+            this.dtpChamCong.TabIndex = 3;
             // 
             // btnCheckIn
             // 
-            btnCheckIn.Location = new Point(731, 16);
-            btnCheckIn.Name = "btnCheckIn";
-            btnCheckIn.Size = new Size(157, 59);
-            btnCheckIn.TabIndex = 4;
-            btnCheckIn.Text = "CheckIn";
-            btnCheckIn.UseVisualStyleBackColor = true;
-            btnCheckIn.Click += btnCheckIn_Click;
+            this.btnCheckIn.Location = new System.Drawing.Point(731, 16);
+            this.btnCheckIn.Name = "btnCheckIn";
+            this.btnCheckIn.Size = new System.Drawing.Size(157, 59);
+            this.btnCheckIn.TabIndex = 4;
+            this.btnCheckIn.Text = "CheckIn";
+            this.btnCheckIn.UseVisualStyleBackColor = true;
             // 
             // btnCheckOut
             // 
-            btnCheckOut.Location = new Point(731, 97);
-            btnCheckOut.Name = "btnCheckOut";
-            btnCheckOut.Size = new Size(157, 59);
-            btnCheckOut.TabIndex = 5;
-            btnCheckOut.Text = "CheckOut";
-            btnCheckOut.UseVisualStyleBackColor = true;
-            btnCheckOut.Click += btnCheckOut_Click;
+            this.btnCheckOut.Location = new System.Drawing.Point(731, 97);
+            this.btnCheckOut.Name = "btnCheckOut";
+            this.btnCheckOut.Size = new System.Drawing.Size(157, 59);
+            this.btnCheckOut.TabIndex = 5;
+            this.btnCheckOut.Text = "CheckOut";
+            this.btnCheckOut.UseVisualStyleBackColor = true;
             // 
             // btnNghi
             // 
-            btnNghi.Location = new Point(731, 177);
-            btnNghi.Name = "btnNghi";
-            btnNghi.Size = new Size(157, 59);
-            btnNghi.TabIndex = 6;
-            btnNghi.Text = "Xin Nghi";
-            btnNghi.UseVisualStyleBackColor = true;
+            this.btnNghi.Location = new System.Drawing.Point(731, 177);
+            this.btnNghi.Name = "btnNghi";
+            this.btnNghi.Size = new System.Drawing.Size(157, 59);
+            this.btnNghi.TabIndex = 6;
+            this.btnNghi.Text = "Xin Nghi";
+            this.btnNghi.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 177);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(645, 291);
-            dataGridView1.TabIndex = 7;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 177);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(645, 291);
+            this.dataGridView1.TabIndex = 7;
             // 
             // txtLiDo
             // 
-            txtLiDo.Location = new Point(731, 259);
-            txtLiDo.Name = "txtLiDo";
-            txtLiDo.Size = new Size(228, 27);
-            txtLiDo.TabIndex = 8;
+            this.txtLiDo.Location = new System.Drawing.Point(731, 259);
+            this.txtLiDo.Name = "txtLiDo";
+            this.txtLiDo.Size = new System.Drawing.Size(228, 27);
+            this.txtLiDo.TabIndex = 8;
             // 
             // lblTotal
             // 
-            lblTotal.AutoSize = true;
-            lblTotal.Location = new Point(731, 319);
-            lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(40, 20);
-            lblTotal.TabIndex = 9;
-            lblTotal.Text = "tong";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(731, 319);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(40, 20);
+            this.lblTotal.TabIndex = 9;
+            this.lblTotal.Text = "tong";
             // 
             // btnShow
             // 
-            btnShow.Location = new Point(500, 94);
-            btnShow.Name = "btnShow";
-            btnShow.Size = new Size(157, 59);
-            btnShow.TabIndex = 10;
-            btnShow.Text = "Hien thi";
-            btnShow.UseVisualStyleBackColor = true;
-            btnShow.Click += btnShow_Click;
+            this.btnShow.Location = new System.Drawing.Point(500, 94);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(157, 59);
+            this.btnShow.TabIndex = 10;
+            this.btnShow.Text = "Hien thi";
+            this.btnShow.UseVisualStyleBackColor = true;
             // 
             // frmChamCong
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1008, 480);
-            Controls.Add(btnShow);
-            Controls.Add(lblTotal);
-            Controls.Add(txtLiDo);
-            Controls.Add(dataGridView1);
-            Controls.Add(btnNghi);
-            Controls.Add(btnCheckOut);
-            Controls.Add(btnCheckIn);
-            Controls.Add(dtpChamCong);
-            Controls.Add(txtMSNV);
-            Controls.Add(label2);
-            Controls.Add(lblMSNV);
-            Name = "frmChamCong";
-            Text = "frmChamCong";
-            Load += frmChamCong_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1008, 480);
+            this.Controls.Add(this.btnShow);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.txtLiDo);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnNghi);
+            this.Controls.Add(this.btnCheckOut);
+            this.Controls.Add(this.btnCheckIn);
+            this.Controls.Add(this.dtpChamCong);
+            this.Controls.Add(this.txtMSNV);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblMSNV);
+            this.Name = "frmChamCong";
+            this.Text = "frmChamCong";
+            this.Load += new System.EventHandler(this.frmChamCong_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
